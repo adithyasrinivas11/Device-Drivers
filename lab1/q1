@@ -1,0 +1,55 @@
+ps aux |grep d$ |awk '{if($7 == "?") print $0; }'
+
+explanation of the command:
+ps aux gives the list of running process.the output is piped to grep command. here the list filters process running that ends with 'd'. the out put is further piped to awk to get the entire line/row which dosent have any connection with terminal.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1)systemd-journald:
+
+systemd-journald is a system service that collects and stores logging data. It creates and maintains structured, indexed journals based on 
+logging information that is received from a variety of sources: Kernel log messages, via kmsg
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2)systemd-udevd
+
+systemd-udevd listens to kernel uevents. For every event, systemd-udevd executes matching instructions specified in udev rules. ... The behavior of the daemon can be configured using udev. conf(5), its command line options, environment variables, and on the kernel command line, or changed dynamically with udevadm control
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3)irqbalance
+
+irqbalance is a Linux daemon that distributes interrupts over among the processors and cores in your computer system. The design goal of irqbalance is to do find a balance between power savings and optimal performance. ... This allows a given set of CPU's to not be bothered by any interrupt service load
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4)systemd-logind
+
+Keeping track of users and sessions, their processes and their idle state. This is implemented by allocating a systemd slice unit for each user below user.slice, and a scope unit below it for each concurrent session of a user.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5)upowerd - UPower Daemon  
+
+upowerd provides the org.freedesktop.UPower service on the system message bus. Users or administrators should never need to start this daemon as it will be automatically started by dbus-daemon(1) whenever an application calls into the org.freedesktop.UPower service.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6)colord
+
+ colord is a system service that makes it easy to manage, install and generate color profiles to accurately color manage input and output devices. colord itself is a system activated daemon called colord. Being system activated means that it's only started when the user is using a text mode or graphical tool. 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+7)gvfsd - Main daemon for gvfs
+
+gvfsd is the main daemon for the gvfs virtual filesystem. It provides the org.gtk.vfs.Daemon name on the session bus. gvfsd is autostarted by GIO clients if it is not running.
+
+The primary task of gvfsd is to act as a mount tracker/manager. It spawns new backends when requested and keeps track fo their lifecycle, maintaining a list of active mounts and creates direct connections to them
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+8)udisksd - The udisks system daemon 
+ 
+ The udisksd program provides the org.freedesktop.UDisks2 name on the system message bus. Users or administrators should never need to start this daemon as it will be automatically started by dbus-daemon(1) or systemd(1) whenever an application tries to access its D-Bus interfaces. 
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+9)boltd - thunderbolt device managing system daemon
+
+boltd is the thunderbolt device manager daemon. Its goal is to enable the secure and convenient use of thunderbolt devices by using the security features of modern thunderbolt controllers. It provides the org.freedesktop.bolt name on the system bus. boltd is autostarted via systemd/udev if a thunderbolt device is connected.
+ 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+10)initd
+
+init.d is deamon which is the first process of the Linux system. Then other processes, services, daemons, and threats are started by init. So init.d is a configuration database for the init process.
+
