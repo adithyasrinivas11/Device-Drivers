@@ -1,0 +1,1 @@
+cmd_/root/Desktop/Device-Drivers/lab2/q3/chardev.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T /usr/src/linux-headers-4.19.0-kali4-common/scripts/module-common.lds  --build-id  -o /root/Desktop/Device-Drivers/lab2/q3/chardev.ko /root/Desktop/Device-Drivers/lab2/q3/chardev.o /root/Desktop/Device-Drivers/lab2/q3/chardev.mod.o ;  true
